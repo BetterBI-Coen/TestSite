@@ -248,12 +248,22 @@ h3 {
 }
 
 .trust-badges {
-  display: flex;
+  display: none;
   gap: 18px;
   list-style: none;
   margin: 1rem 0 0;
   padding: 0;
-  color: #C2A83E
+  color: #83712B
+}
+
+.trust-badges2 {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  list-style: none;
+  margin: 1rem 0 0;
+  padding: 0;
+  color: #83712B
 }
 
 .placeholder-img {
@@ -313,8 +323,8 @@ h3 {
 
 /* ----- Value stats ----- */
 .value-stats {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  /* grid-template-columns: repeat(3, 1fr); */
   gap: var(--space);
   margin-top: clamp(20px, 3vw, 40px);
 }
@@ -335,6 +345,23 @@ h3 {
 
 .stat-label {
   color: var(--muted)
+}
+.value-stats {
+  display: grid;
+  gap: var(--space);
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 1000px) {
+  .value-stats {
+    grid-template-columns: repeat(2, 1fr)
+  }
+}
+
+@media (max-width: 600px) {
+  .value-stats {
+    grid-template-columns: 1fr
+  }
 }
 
 /* ----- Steps ----- */
