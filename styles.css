@@ -185,7 +185,9 @@ h3 {
   gap: clamp(8px, 1.8vw, 22px);
   list-style: none;
   padding: 0;
-  margin: 0
+  margin: 0;
+  align-items: center;
+
 }
 
 .site-nav a {
@@ -230,19 +232,20 @@ h3 {
 .placeholder-img {
   aspect-ratio: 4/3;
   /* background: linear-gradient(135deg, #eef2ff, #f8fafc); */
-  border: 1px dashed var(--border);
+  /* border: 1px dashed var(--border); */
   border-radius: var(--radius);
-  /* display: grid;
-  place-items: center; */
+  display: grid;
+  place-items: center;
   /* color: var(--muted); */
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  background-image: url("images/woonkamer.jpg");
+  border-radius: var(--radius);
 }
 
-.hero-media {
-
-  
-}
 
 @media (max-width: 900px) {
   .hero .hero-inner {
@@ -363,9 +366,18 @@ h3 {
 .ba-before,
 .ba-after {
   aspect-ratio: 4/3;
-  display: grid;
-  place-items: center;
+  overflow: hidden;
+  /* display: grid; */
+  /* place-items: bottom; */
   color: var(--muted);
+}
+
+.ba-after img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 0% 75%;
+  border-radius: var(--radius);
 }
 
 .ba-before {
