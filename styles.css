@@ -4,8 +4,10 @@
   --bg-alt: #f7f8fb;
   --text: #1f2937;
   --muted: #6b7280;
-  --brand: #2c7be5;
-  --brand-strong: #1c58b2;
+  --brand: #3a5a40;
+  /* --brand: #2c7be5; */
+  /* --brand-strong: #1c58b2; */
+  --brand-strong: #344e41;
   --ring: rgba(44, 123, 229, .35);
   --card: #ffffff;
   --border: #e5e7eb;
@@ -251,7 +253,7 @@ h3 {
   list-style: none;
   margin: 1rem 0 0;
   padding: 0;
-  color: #0f5132
+  color: #C2A83E
 }
 
 .placeholder-img {
