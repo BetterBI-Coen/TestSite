@@ -1,8 +1,119 @@
+<!doctype html>
+<html lang="nl">
 
-    <!-- Vervang onderstaande afbeelding met een echte foto -->
-    <div style="
-    width: 400px;
-    height: 400px;
-    background-color: green;">
-        <img style="width100%; object-fit: cover; object-position: center;" src="images\buitenuitzicht.jpg" alt="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BKZ Bouwvisie</title>
+  <meta name="description"
+    content="BKZ Bouwvisie helpt huiseigenaren met gerichte renovaties om sneller te verkopen en een hogere verkoopprijs te realiseren." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="favicon.ico" />
+  <meta property="og:title" content="BKZ Bouwvisie — Instapklaar vastgoed" />
+  <meta property="og:description" content="Gerichte renovaties voor een snelle verkoop en een hogere opbrengst." />
+  <meta property="og:type" content="website" />
+</head>
+
+<body>
+  <a class="skip-link" href="#contact">Direct naar contact</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#home" class="brand" aria-label="BKZ Bouwvisie home">
+        <span class="brand-mark" aria-hidden="true">BKZ</span>
+        <span class="brand-text">Bouwvisie</span>
+      </a>
+
+      <!-- desktop menu -->
+      <nav class="site-nav" aria-label="Hoofdmenu">
+        <ul>
+          <li><a href="#waarde">Werkwijze</a></li>
+          <!-- <li><a href="#resultaten">Resultaten</a></li> -->
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a class="btn" href="#contact">Offerte</a></li>
+        </ul>
+      </nav>
+
+      <!-- mobile menu -->
+      <input id="menu-toggle" type="checkbox" class="menu-toggle" aria-label="Menu">
+      <label class="hamburger" for="menu-toggle" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </label>
+      <nav class="nav-mobile">
+        <ul>
+          <li><a href="#waarde">Werkwijze</a></li>
+          <!-- <li><a href="resultaten/">Resultaten</a></li> -->
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a class="btn" href="#contact">Offerte</a></li>
+        </ul>
+      </nav>
     </div>
+  </header>
+
+  <main id="home">
+    <!-- Hero -->
+<div class="carousel gallery" id="carousel">
+    <div class="carousel-track" id="carousel-track">
+      <img src="https://picsum.photos/id/1018/600/400" alt="Image 1" />
+      <img src="https://picsum.photos/id/1025/600/400" alt="Image 2" />
+      <img src="https://picsum.photos/id/1035/600/400" alt="Image 3" />
+      <img src="https://picsum.photos/id/1041/600/400" alt="Image 4" />
+      <img src="https://picsum.photos/id/1052/600/400" alt="Image 5" />
+      <img src="https://picsum.photos/id/1062/600/400" alt="Image 6" />
+            <img src="https://picsum.photos/id/1018/600/400" alt="Image 1" />
+      <img src="https://picsum.photos/id/1025/600/400" alt="Image 2" />
+      <img src="https://picsum.photos/id/1035/600/400" alt="Image 3" />
+      <img src="https://picsum.photos/id/1041/600/400" alt="Image 4" />
+      <img src="https://picsum.photos/id/1052/600/400" alt="Image 5" />
+      <img src="https://picsum.photos/id/1062/600/400" alt="Image 6" />
+            <img src="https://picsum.photos/id/1018/600/400" alt="Image 1" />
+      <img src="https://picsum.photos/id/1025/600/400" alt="Image 2" />
+      <img src="https://picsum.photos/id/1035/600/400" alt="Image 3" />
+      <img src="https://picsum.photos/id/1041/600/400" alt="Image 4" />
+      <img src="https://picsum.photos/id/1052/600/400" alt="Image 5" />
+      <img src="https://picsum.photos/id/1062/600/400" alt="Image 6" />
+    </div>
+  </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p><strong>BKZ Bouwvisie</strong> · Regio Zuid Holland Zuid, Delft, Den Haag, Rotterdam</p>
+      <p class="text-muted">info@aannemersgroepdelft.nl</p>
+      <p class="small">© <span id="year"></span> BKZ Bouwvisie. Alle rechten voorbehouden.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Kleine verbetering: actueel jaartal en smooth scroll fallback
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+  <!-- Structured data (optioneel, vul adres/telefoon echt in) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "BKZ Bouwvisie",
+    "areaServed": ["Delft","Den Haag","Zoetermeer"],
+    "image": "https://example.com/hero.jpg",
+    "telephone": "+3115-0000000",
+    "email": "info@aannemersgroepdelft.nl",
+    "url": "https://example.com",
+    "priceRange": "€€",
+    "description": "Gerichte renovaties om de verkoopwaarde van uw woning te verhogen."
+  }
+  </script>
+  <script>
+    window.addEventListener('resize', function() {
+    if (window.matchMedia('(min-width: 921px)').matches) {
+        document.getElementById('menu-toggle').checked = false;
+    }
+}, true);
+  </script>
+  <script src="carousel.js"></script>
+</body>
+
+</html>

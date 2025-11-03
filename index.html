@@ -167,30 +167,55 @@
     <!-- Resultaten (Before/After placeholders) -->
     <section id="resultaten" class="section">
       <div class="container">
-        <header class="section-header">
+        <!-- <header class="section-header"> -->
           <!-- <h2>Impressiefoto's</h2> -->
           <!-- <p>Zie het verschil dat kopers voelen bij binnenkomst.</p> -->
-        </header>
-
+        <!-- </header> -->
+        <!-- 
         <div class="gallery">
           <figure class="ba">
-            <!-- <div class="ba-before"></div> -->
+            <div class="ba-before"></div>
             <div class="ba-after"><img src="images/woonkamer.jpg" alt=""></div>
-            <!-- <figcaption>Woonkamer</figcaption> -->
+            <figcaption>Woonkamer</figcaption>
           </figure>
           <figure class="ba">
-            <!-- <div class="ba-before">VOOR</div> -->
+            <div class="ba-before">VOOR</div>
             <div class="ba-after"><img src="images/badkamer_na.jpg" alt=""></div>
-            <!-- <figcaption>Badkamer – nieuwe tegels, kranen en glazen scherm.</figcaption> -->
+            <figcaption>Badkamer – nieuwe tegels, kranen en glazen scherm.</figcaption>
           </figure>
           <figure class="ba">
-            <!-- <div class="ba-before">VOOR</div> -->
+            <div class="ba-before">VOOR</div>
             <div class="ba-after"><img src="images/wc2.jpg" alt=""></div>
-            <!-- <figcaption>Badkamer – nieuwe tegels, kranen en glazen scherm.</figcaption> -->
+            <figcaption>Badkamer – nieuwe tegels, kranen en glazen scherm.</figcaption>
           </figure>
 
+        </div> -->
+
+
+        <div class="carousel gallery" id="carousel">
+          <div class="carousel-track" id="carousel-track">
+            <img src="images/woonkamer.jpg" alt="Image 1" />
+            <img src="images/badkamer_na.jpg" alt="Image 2" />
+            <img src="images/wc2.jpg" alt="Image 3" />
+            <img src="images/woonkamer.jpg" alt="Image 1" />
+            <img src="images/badkamer_na.jpg" alt="Image 2" />
+            <img src="images/wc2.jpg" alt="Image 3" />
+            <img src="images/woonkamer.jpg" alt="Image 1" />
+            <img src="images/badkamer_na.jpg" alt="Image 2" />
+            <img src="images/wc2.jpg" alt="Image 3" />
+            <img src="images/woonkamer.jpg" alt="Image 1" />
+            <img src="images/badkamer_na.jpg" alt="Image 2" />
+            <img src="images/wc2.jpg" alt="Image 3" />
+            <img src="images/woonkamer.jpg" alt="Image 1" />
+            <img src="images/badkamer_na.jpg" alt="Image 2" />
+            <img src="images/wc2.jpg" alt="Image 3" />
+            <img src="images/woonkamer.jpg" alt="Image 1" />
+            <img src="images/badkamer_na.jpg" alt="Image 2" />
+            <img src="images/wc2.jpg" alt="Image 3" />
+          </div>
         </div>
-                <div class="value-stats">
+
+        <div class="value-stats">
           <div class="stat">
             <div class="stat-number">Eén aanspreekpunt</div>
             <!-- <div class="stat-label">persoonlijke aandacht</div> -->
@@ -216,7 +241,8 @@
           <!-- <p>Echte verhalen van huiseigenaren die slim verkocht hebben.</p> -->
         </header>
         <div class="about-text">
-          BKZ Bouwvisie is een betrouwbare en deskundige partner voor een langdurige samenwerking. Met de focus op de wensen van
+          BKZ Bouwvisie is een betrouwbare en deskundige partner voor een langdurige samenwerking. Met de focus op de
+          wensen van
           de koper proberen wij altijd kwaliteit, snelheid en efficiëntie te leveren. Ons team bestaat uit ervaren
           professionals die hun vak verstaan en zich dagelijks inzetten om projecten succesvol te realiseren. Van
           ontwikkeling en ontwerp tot uitvoering en oplevering.
@@ -295,7 +321,8 @@
         <div class="faq">
           <details>
             <summary>Wat zijn waardestuwers?</summary>
-            <p>De factoren die de waarde significant beïnvloeden en bijdragen aan de winstgevendheid en verdiencapaciteit.</p>
+            <p>De factoren die de waarde significant beïnvloeden en bijdragen aan de winstgevendheid en
+              verdiencapaciteit.</p>
           </details>
           <details>
             <summary>Moet ik tijdens de werkzaamheden verhuizen?</summary>
@@ -305,13 +332,16 @@
             <summary>Werkt u samen met makelaars?</summary>
             <p>Ja, we stemmen plan en timing graag af met uw makelaar.</p>
           </details>
-            <details>
+          <details>
             <summary>Hoe groot is het woningtekort in Nederland?</summary>
-            <p>Ondanks de bouwplannen zal er in 2030 waarschijnlijk nog een woningtekort zijn van 200.000 woningen. De vraag naar woningen wordt verder versterkt door de bevolkingsgroei en de economische status van veel huishoudens.</p>
+            <p>Ondanks de bouwplannen zal er in 2030 waarschijnlijk nog een woningtekort zijn van 200.000 woningen. De
+              vraag naar woningen wordt verder versterkt door de bevolkingsgroei en de economische status van veel
+              huishoudens.</p>
           </details>
-            <details>
+          <details>
             <summary>Verwachting van de hypotheekrente?</summary>
-            <p>Verwacht wordt dat de hypotheekrente zal afnemen, wat de koopkracht vergroot en de huizenprijzen opdrijft.</p>
+            <p>Verwacht wordt dat de hypotheekrente zal afnemen, wat de koopkracht vergroot en de huizenprijzen
+              opdrijft.</p>
           </details>
         </div>
       </div>
@@ -405,11 +435,11 @@
   }
   </script>
   <script>
-    window.addEventListener('resize', function() {
-    if (window.matchMedia('(min-width: 921px)').matches) {
+    window.addEventListener('resize', function () {
+      if (window.matchMedia('(min-width: 921px)').matches) {
         document.getElementById('menu-toggle').checked = false;
-    }
-}, true);
+      }
+    }, true);
   </script>
 </body>
 
