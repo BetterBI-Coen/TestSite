@@ -2,6 +2,7 @@
 <html lang="nl">
 
 <head>
+  <meta name="robots" content="noindex">
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>BKZ Bouwvisie</title>
@@ -13,6 +14,7 @@
   <meta property="og:title" content="BKZ Bouwvisie — Instapklaar vastgoed" />
   <meta property="og:description" content="Gerichte renovaties voor een snelle verkoop en een hogere opbrengst." />
   <meta property="og:type" content="website" />
+  <script src="form.js" defer></script>
 </head>
 
 <body>
@@ -28,9 +30,10 @@
       <!-- desktop menu -->
       <nav class="site-nav" aria-label="Hoofdmenu">
         <ul>
-          <li><a href="#waarde">Werkwijze</a></li>
+          <li><a href="#waarde">Diensten</a></li>
           <!-- <li><a href="#resultaten">Resultaten</a></li> -->
-          <li><a href="#reviews">Reviews</a></li>
+          <!-- <li><a href="#reviews">Reviews</a></li> -->
+          <li><a href="#about">Over ons</a></li>
           <li><a href="#faq">FAQ</a></li>
           <li><a class="btn" href="#contact">Offerte</a></li>
         </ul>
@@ -43,9 +46,11 @@
       </label>
       <nav class="nav-mobile">
         <ul>
-          <li><a href="#waarde">Werkwijze</a></li>
+          <li><a href="#waarde">Diensten</a></li>
           <!-- <li><a href="resultaten/">Resultaten</a></li> -->
-          <li><a href="#reviews">Reviews</a></li>
+          <!-- <li><a href="#reviews">Reviews</a></li> -->
+          <li><a href="#about">Over ons</a></li>
+          <li><a href="#faq">FAQ</a></li>
           <li><a class="btn" href="#contact">Offerte</a></li>
         </ul>
       </nav>
@@ -168,8 +173,8 @@
     <section id="resultaten" class="section">
       <div class="container">
         <!-- <header class="section-header"> -->
-          <!-- <h2>Impressiefoto's</h2> -->
-          <!-- <p>Zie het verschil dat kopers voelen bij binnenkomst.</p> -->
+        <!-- <h2>Impressiefoto's</h2> -->
+        <!-- <p>Zie het verschil dat kopers voelen bij binnenkomst.</p> -->
         <!-- </header> -->
         <!-- 
         <div class="gallery">
@@ -195,11 +200,11 @@
         <div class="carousel gallery" id="carousel">
           <div class="carousel-track" id="carousel-track">
             <img src="images/woonkamer.jpg" alt="Image 1" />
-            <img src="images/badkamer_na.jpg" alt="Image 2" />
+            <img src="images/tuin1.jpg" alt="Image 2" />
             <img src="images/wc2.jpg" alt="Image 3" />
             <img src="images/woonkamer.jpg" alt="Image 1" />
             <img src="images/badkamer_na.jpg" alt="Image 2" />
-            <img src="images/wc2.jpg" alt="Image 3" />
+            <img src="images/tuin_vogel1.jpg" alt="Image 3" />
             <img src="images/woonkamer.jpg" alt="Image 1" />
             <img src="images/badkamer_na.jpg" alt="Image 2" />
             <img src="images/wc2.jpg" alt="Image 3" />
@@ -355,28 +360,48 @@
           <p>Wij nemen z.s.m. contact met u op voor een gratis kennismakingsgesprek!</p>
         </header>
 
-        <form class="contact-form" action="#" method="post" novalidate>
+        <form id="contact-form" novalidate class="contact-form" action="https://formspree.io/f/mkgkwrjq" method="post">
           <div class="form-grid">
             <div class="form-field">
               <label for="naam">Naam</label>
-              <input id="naam" name="naam" type="text" required placeholder="Uw naam" />
+              <input id="naam" name="naam" type="text" required placeholder="Uw naam" data-error="Vul uw naam in." />
+              <small class="error-message" aria-live="polite"></small>
             </div>
+
             <div class="form-field">
               <label for="email">E-mail</label>
-              <input id="email" name="email" type="email" required placeholder="naam@voorbeeld.nl" />
+              <input id="email" name="email" type="email" required placeholder="naam@voorbeeld.nl"
+                data-error="Vul een geldig emailadres in." />
+              <small class="error-message" aria-live="polite"></small>
             </div>
-            <div class="form-field">
+            <div class="form-field form">
               <label for="telefoon">Telefoon</label>
               <input id="telefoon" name="telefoon" type="tel" inputmode="tel" placeholder="06-…" />
+
             </div>
-            <div class="form-field">
-              <label for="plaats">Plaats</label>
-              <input id="plaats" name="plaats" type="text" placeholder="Bijv. Delft" />
-            </div>
+<!--           
             <div class="form-field">
               <label for="datum">Gewenste opleverdatum</label>
               <input id="datum" name="datum" type="date" />
-            </div>
+            </div> -->
+
+            <fieldset class="form-field-full2">
+              <legend>Kies wat voor u van toepassing is</legend>
+              <div class="form-field">
+                <input type="radio" id="gezamelijk" name="query" value="Gezamelijk investeren" required>
+                <label for="gezamelijk">U wilt gezamenlijk investeren in een nieuw vastgoedobject. </label>
+              </div>
+              <div class="form-field">
+                <input type="radio" id="verkoop" name="query" value="Verkoop bestaand pand" required>
+                <label for="verkoop">U heeft een bestaand pand en wilt met ons samenwerken voor het beste verkoopresultaat. </label>
+              </div>
+              <div class="form-field">
+                <input type="radio" id="verhuur" name="query" value="Verkoop bestaand pand" required>
+                <label for="verhuur">U heeft een bestaand pand en wilt met ons samenwerken voor het beste verkoopresultaat. </label>
+              </div>
+              <span class="error-message" aria-live="polite"></span>
+            </fieldset>
+
             <div class="form-field">
               <label for="budget">Indicatief budget</label>
               <select id="budget" name="budget">
@@ -387,20 +412,35 @@
                 <option>&gt; €30.000</option>
               </select>
             </div>
+              <div class="form-field">
+              <label for="plaats">Plaats</label>
+              <input id="plaats" name="plaats" type="text" placeholder="Bijv. Delft" />
+              <small class="error-message" aria-live="polite"></small>
+            </div>
+
             <div class="form-field form-field-full">
               <label for="bericht">Bericht</label>
               <textarea id="bericht" name="bericht" rows="5"
                 placeholder="Vertel iets over de huidige staat en wensen…"></textarea>
             </div>
+
             <div class="form-field form-field-full">
-              <label class="checkbox">
-                <input type="checkbox" name="toestemming" required />
-                <span>Ik ga akkoord dat BKZ Bouwvisie contact met mij opneemt.</span>
+              <!-- <label class="checkbox"> -->
+              <input type="checkbox" id="toestemming" name="toestemming" required
+                data-error="Ga akkoord met de voorwaarden." />
+              <label for="toestemming" class="checkbox">Ik ga akkoord dat Aannemers Groep Delft contact met mij opneemt.
               </label>
+              <!-- <span>Ik ga akkoord dat Aannemers Groep Delft contact met mij opneemt. *</span> -->
+
+              <!-- </label> -->
+              <small class="error-message" aria-live="polite"></small>
             </div>
+
           </div>
+
           <button class="btn" type="submit">Verstuur aanvraag</button>
           <p class="small text-muted">We reageren doorgaans binnen 1 werkdag.</p>
+
         </form>
       </div>
     </section>
@@ -441,6 +481,18 @@
       }
     }, true);
   </script>
+
+  <script>
+    document.querySelectorAll('.nav-mobile a').forEach(link => {
+      link.addEventListener('click', () => {
+        const checkbox = document.getElementById('menu-toggle');
+        if (checkbox) checkbox.checked = false;
+      });
+    });
+  </script>
+
+
+
 </body>
 
 </html>
