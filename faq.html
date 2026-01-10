@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="nl">
+
+<head>
+  <meta name="robots" content="noindex">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BKZ Bouwvisie</title>
+  <meta name="description"
+    content="BKZ Bouwvisie helpt huiseigenaren met gerichte renovaties om sneller te verkopen en een hogere verkoopprijs te realiseren." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="favicon.ico" />
+  <meta property="og:title" content="BKZ Bouwvisie — Instapklaar vastgoed" />
+  <meta property="og:description" content="Gerichte renovaties voor een snelle verkoop en een hogere opbrengst." />
+  <meta property="og:type" content="website" />
+  <script src="form.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#contact">Direct naar contact</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#home" class="brand" aria-label="BKZ Bouwvisie home">
+        <span class="brand-mark" aria-hidden="true">BKZ</span>
+        <span class="brand-text">Bouwvisie</span>
+      </a>
+
+      <!-- desktop menu -->
+      <nav class="site-nav" aria-label="Hoofdmenu">
+        <ul>
+          <li><a href="#waarde">Diensten</a></li>
+          <!-- <li><a href="#resultaten">Resultaten</a></li> -->
+          <!-- <li><a href="#reviews">Reviews</a></li> -->
+          <li><a href="#about">Over ons</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a class="btn" href="#contact">Offerte</a></li>
+        </ul>
+      </nav>
+
+      <!-- mobile menu -->
+      <input id="menu-toggle" type="checkbox" class="menu-toggle" aria-label="Menu">
+      <label class="hamburger" for="menu-toggle" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </label>
+      <nav class="nav-mobile">
+        <ul>
+          <li><a href="#waarde">Diensten</a></li>
+          <!-- <li><a href="resultaten/">Resultaten</a></li> -->
+          <!-- <li><a href="#reviews">Reviews</a></li> -->
+          <li><a href="#about">Over ons</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a class="btn" href="#contact">Offerte</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home">
+   
+
+   
+    <!-- FAQ -->
+    <section id="faq" class="section">
+      <div class="container">
+        <header class="section-header">
+          <h2>Veelgestelde vragen</h2>
+        </header>
+
+        <div class="faq">
+          <details>
+            <summary>Wat zijn waardestuwers?</summary>
+            <p>De factoren die de waarde significant beïnvloeden en bijdragen aan de winstgevendheid en
+              verdiencapaciteit.</p>
+          </details>
+          <details>
+            <summary>Moet ik tijdens de werkzaamheden verhuizen?</summary>
+            <p>Meestal niet. We plannen slim en beperken overlast.</p>
+          </details>
+          <details>
+            <summary>Werkt u samen met makelaars?</summary>
+            <p>Ja, we stemmen plan en timing graag af met uw makelaar.</p>
+          </details>
+          <details>
+            <summary>Hoe groot is het woningtekort in Nederland?</summary>
+            <p>Ondanks de bouwplannen zal er in 2030 waarschijnlijk nog een woningtekort zijn van 200.000 woningen. De
+              vraag naar woningen wordt verder versterkt door de bevolkingsgroei en de economische status van veel
+              huishoudens.</p>
+          </details>
+          <details>
+            <summary>Verwachting van de hypotheekrente?</summary>
+            <p>Verwacht wordt dat de hypotheekrente zal afnemen, wat de koopkracht vergroot en de huizenprijzen
+              opdrijft.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p><strong>BKZ Bouwvisie</strong> · Nederland · info@aannemersgroepdelft.nl</p>
+      <p class="small">© <span id="year"></span> BKZ Bouwvisie. Alle rechten voorbehouden.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Kleine verbetering: actueel jaartal en smooth scroll fallback
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+  <!-- Structured data (optioneel, vul adres/telefoon echt in) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "BKZ Bouwvisie",
+    "areaServed": ["Delft","Den Haag","Zoetermeer"],
+    "image": "https://example.com/hero.jpg",
+    "telephone": "+3115-0000000",
+    "email": "info@aannemersgroepdelft.nl",
+    "url": "https://example.com",
+    "priceRange": "€€",
+    "description": "Gerichte renovaties om de verkoopwaarde van uw woning te verhogen."
+  }
+  </script>
+  <script>
+    window.addEventListener('resize', function () {
+      if (window.matchMedia('(min-width: 921px)').matches) {
+        document.getElementById('menu-toggle').checked = false;
+      }
+    }, true);
+  </script>
+
+  <script>
+    document.querySelectorAll('.nav-mobile a').forEach(link => {
+      link.addEventListener('click', () => {
+        const checkbox = document.getElementById('menu-toggle');
+        if (checkbox) checkbox.checked = false;
+      });
+    });
+  </script>
+
+
+
+</body>
+
+</html>
